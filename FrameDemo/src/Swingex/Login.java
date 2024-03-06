@@ -57,11 +57,11 @@ public class Login extends JFrame
 	
 	public String passwordhashing(String password) throws NoSuchAlgorithmException
 	{
-		MessageDigest messageDigest = MessageDigest.getInstance("SHA-1");
-		byte [] hasgBytes = messageDigest.digest(password.getBytes());
+		MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+		byte [] hashBytes = messageDigest.digest(password.getBytes());
 		
 		StringBuilder stringBuilder = new StringBuilder();
-		for(byte b : hasgBytes)
+		for(byte b : hashBytes)
 		{
 			stringBuilder.append(String.format("%02x", b));
 		}

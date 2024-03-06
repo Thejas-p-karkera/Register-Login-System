@@ -74,7 +74,7 @@ public class Register extends JFrame
 //	Method to Hashing the Passwords
 	public String passwordhashing(String password) throws NoSuchAlgorithmException
 	{
-		MessageDigest messageDigest = MessageDigest.getInstance("SHA-1");
+		MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
 		byte [] hashBytes = messageDigest.digest(password.getBytes());
 		
 		StringBuilder stringBuilder = new StringBuilder();
